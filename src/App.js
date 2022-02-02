@@ -83,7 +83,6 @@ class App extends React.Component {
     delete tasks[taskId];
     let newColumns = this.state.data.columns;
     for (const column in this.state.data.columns) {
-      console.log(this.state.data.columns[column].taskIds.filter(id => id !== taskId));
       newColumns[column].taskIds = this.state.data.columns[column].taskIds.filter(id => id !== taskId);
     }
     this.setState({
